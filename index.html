@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#241713">
+  <meta name="description" content="Bertija Social Club — meni, piće i kratka igra.">
+  <title>Bertija Social Club — Meni</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <main class="site-shell">
+    <header class="hero">
+      <p class="eyebrow">BERTIJA</p>
+      <h1>MENU</h1>
+      <p class="club-name">SOCIAL CLUB</p>
+    </header>
+
+    <section class="menu-section">
+      <div class="section-heading"><span data-i18n="draft">TOČENA PIVA</span><i></i></div>
+      <div id="draft-beer" class="menu-list"></div>
+    </section>
+
+    <section class="menu-section">
+      <div class="section-heading"><span data-i18n="bottle">PIVO FLAŠA</span><i></i></div>
+      <div id="bottled-beer" class="menu-list"></div>
+    </section>
+
+    <section class="menu-section">
+      <div class="section-heading"><span data-i18n="spirits">ŽESTINE</span><i></i></div>
+      <div id="spirits" class="menu-list"></div>
+    </section>
+
+    <section class="menu-section">
+      <div class="section-heading"><span data-i18n="wine">VINO</span><i></i></div>
+      <div id="wine" class="menu-list"></div>
+    </section>
+
+    <section class="menu-section">
+      <div class="section-heading"><span data-i18n="hot">TOPLI NAPICI</span><i></i></div>
+      <div id="hot-drinks" class="menu-list"></div>
+    </section>
+
+    <section class="menu-section">
+      <div class="section-heading"><span data-i18n="soft">SOKOVI I VODE</span><i></i></div>
+      <div id="soft-drinks" class="menu-list"></div>
+    </section>
+
+    <section class="menu-section food-section">
+      <div class="section-heading"><span data-i18n="food">HRANA</span><i></i></div>
+      <div id="food" class="menu-list"></div>
+    </section>
+
+    <section class="hours">
+      <h2 data-i18n="hours">RADNO VREME</h2>
+      <div class="hours-grid">
+        <div><b data-i18n="sunThu">NED – ČET</b><span>16:00 – 00:00</span></div>
+        <div><b data-i18n="fri">PET</b><span>16:00 – 02:00</span></div>
+        <div><b data-i18n="sat">SUB</b><span>16:00 – 02:00</span></div>
+      </div>
+    </section>
+
+    <nav class="bottom-actions" aria-label="Page controls">
+      <button id="language-toggle" class="action-button secondary" type="button">English</button>
+      <button id="game-open" class="action-button primary" type="button" data-i18n="gameButton">IGRA / GAME</button>
+    </nav>
+    <footer>BERTIJA SOCIAL CLUB</footer>
+  </main>
+
+  <section id="game-screen" class="game-screen" aria-hidden="true">
+    <div class="game-backdrop backdrop-one"></div>
+    <div class="game-backdrop backdrop-two"></div>
+    <div class="game-topline"><span>WASTED MODE</span><button id="game-close" aria-label="Close game">×</button></div>
+    <div id="intro-panel" class="game-dialog">
+      <p class="dialog-kicker">BERTIJA CHALLENGE</p>
+      <h2 data-i18n="challenge">Napi se za 10 sekundi</h2>
+      <p data-i18n="challengeEn">Wasted in 10 seconds</p>
+      <button id="game-ok" class="game-button" data-i18n="ok">OK</button>
+    </div>
+    <div id="countdown-panel" class="countdown-panel hidden">
+      <span id="countdown-number">3</span>
+    </div>
+    <div id="play-panel" class="play-panel hidden">
+      <div class="timer-ring" id="timer-ring">
+        <svg viewBox="0 0 240 240" aria-hidden="true">
+          <circle class="ring-track" cx="120" cy="120" r="108"></circle>
+          <circle id="ring-progress" class="ring-progress" cx="120" cy="120" r="108"></circle>
+        </svg>
+        <div class="timer-content">
+          <span id="time-left">10.0</span>
+          <small data-i18n="seconds">SEKUNDI</small>
+        </div>
+      </div>
+      <div class="click-count"><strong id="click-count">0</strong><span data-i18n="clicks">KLIKOVA</span></div>
+      <button id="tap-button" class="tap-button" type="button" data-i18n="tap">KLIKNI!</button>
+    </div>
+    <div id="result-panel" class="game-dialog result-panel hidden">
+      <p class="dialog-kicker" data-i18n="result">REZULTAT</p>
+      <h2 id="result-score">0</h2>
+      <p id="result-message"></p>
+      <div class="result-actions">
+        <button id="back-to-menu" class="game-button secondary-game" data-i18n="menu">MENI</button>
+        <button id="try-again" class="game-button" data-i18n="again">PONOVO</button>
+      </div>
+    </div>
+    <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
+  </section>
+
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/game.js"></script>
+</body>
+</html>
